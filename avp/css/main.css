@@ -1,0 +1,743 @@
+/*@import "jquery.ui.all.css";
+@import "jquery.ui.core.css";
+@import "jquery.ui.datepicker.css";
+@import "jquery.ui.progressbar.css";
+@import "jquery.ui.slider.css";
+@import "jquery.ui.tabs.css";
+@import "jquery.ui.theme.css";
+@import "SpryValidationSelect.css";
+@import "SpryValidationTextField.css";
+*/
+
+
+.form_delete_post {
+    margin-top: 500px;
+}
+
+
+.mini-fonts {
+    font-size: 10px;
+}
+
+.center {
+    text-align: center;
+}
+
+.content-center {
+    margin-left: 20%;
+}
+
+.forgot-password {
+    margin-left: 30px;
+}
+
+.invalidInput, .error{
+    color:#8a1f11;
+    /*background-color:#fbe3e4;*/
+}
+.error,.notice{
+    padding:0.5em;
+    margin:0.5em;
+}
+
+/*.error{
+	border:2px solid #8a1f11;
+	display:none;
+}*/
+.notice {
+    background-color:#FFF6BF;
+    color:#514721;
+    border:2px solid #FFD324;
+    display:none;
+}
+
+
+a {
+    text-decoration:underline;
+    color:#00F;
+    cursor:pointer;
+}
+
+#sheepItForm_controls div, #sheepItForm_controls div input {
+    float:left;
+    margin-right: 10px;
+}
+
+
+BODY {
+}
+body {
+    background-color: #EBE8CC;
+}
+.inptxt {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #BEBEBE;
+    color: #000000;
+    font: 10px Verdana,Arial,san-serif;
+}
+.inpsel {
+    background: none repeat scroll 0 0 #ECE8CB;
+    border: 1px solid #AC9503;
+    color: #000000;
+    font: 11px Verdana;
+}
+.inpsel2 {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #CFE3EE;
+    color: #000000;
+    font: 11px Verdana,verdana,san-serif;
+}
+.inpsel3 {
+    background: none repeat scroll 0 0 #CFE3EE;
+    border: 0 solid #CFE3EE;
+    color: #CFE3EE;
+    font: 5px Verdana,verdana,san-serif;
+}
+.fond1 {
+    background-color: #002384;
+}
+.fond2 {
+    background-color: #CEE3EE;
+}
+.fond3 {
+    background-color: #AD9501;
+}
+.fond4 {
+    background-color: #EBE8CC;
+}
+.fond5 {
+    background-color: #FFFFFF;
+}
+.fond6 {
+    background-color: #005681;
+}
+.txt {
+    color: #000000;
+    font-family: Verdana;
+    font-size: 10px;
+}
+.minitxt {
+    color: #000000;
+    font-family: Verdana,Arial;
+    font-size: 9px;
+}
+.txtb {
+    color: #FFFFFF;
+    font-family: Verdanas,Arial;
+    font-size: 10px;
+}
+A.txtb {
+    color: #FFFFFF;
+    font-family: Verdana regular,Arial;
+    font-size: 10px;
+    text-decoration: none;
+}
+A.txtb:hover {
+    color: #FE7119;
+    font-family: Verdana regular,Arial;
+    font-size: 10px;
+    text-decoration: none;
+}
+.orange {
+    color: #ED4900;
+    font-family: Verdanas,Arial;
+    font-size: 11px;
+}
+A.orange {
+    color: #ED4900;
+    font-family: Verdana regular,Arial;
+    font-size: 10px;
+    text-decoration: none;
+}
+A.orange:hover {
+    color: #000000;
+    font-family: Verdana regular,Arial;
+    font-size: 10px;
+    text-decoration: none;
+}
+.navhaut {
+    color: #005681;
+    font-family: Arial;
+    font-size: 10px;
+}
+.navc {
+    color: #002384;
+    font-family: Verdana;
+    font-size: 10px;
+}
+a.navc {
+    color: #002384;
+    font-family: Verdana;
+    font-size: 10px;
+    font-weight: bold;
+}
+a.navc:hover {
+    color: #005681;
+    font-family: Verdana;
+    font-size: 10px;
+    font-weight: bold;
+}
+.nav {
+    color: #005681;
+    font-family: Verdana;
+    font-size: 10px;
+}
+a.nav {
+    color: #005681;
+    font-family: Verdana;
+    font-size: 10px;
+    font-weight: bold;
+    text-decoration: none;
+}
+a.nav:hover {
+    color: #9E8D00;
+    font-family: Verdana;
+    font-size: 10px;
+    font-weight: bold;
+    text-decoration: none;
+}
+.nava {
+    color: #9E8D00;
+    font-family: Verdana;
+    font-size: 10px;
+}
+A.nava {
+    color: #9E8D00;
+    font-family: Verdana;
+    font-size: 10px;
+    font-weight: bold;
+}
+A.nava:hover {
+    color: #005681;
+    font-family: Verdana;
+    font-size: 10px;
+    font-weight: bold;
+}
+.navon {
+    color: #9E8D00;
+    font-family: Arial;
+    font-size: 10px;
+}
+A.navhaut {
+    color: #005681;
+    font-family: Arial;
+    font-size: 10px;
+    text-decoration: none;
+}
+A.navhaut:hover {
+    color: #9E8D00;
+    font-family: Arial;
+    font-size: 10px;
+    text-decoration: none;
+}
+A.navhaut1 {
+    color: #005681;
+    font-family: arial;
+    font-size: 12px;
+    font-weight: bold;
+    text-decoration: none;
+}
+A.navhaut1:hover {
+    color: #9E8D00;
+    font-family: arial;
+    font-size: 12px;
+    font-weight: bold;
+    text-decoration: none;
+}
+.nivhaut {
+    color: #FFFFFF;
+    font-family: Arial;
+    font-size: 11px;
+    font-weight: bold;
+}
+.nivon {
+    color: #FFFFFF;
+    font-family: Arial;
+    font-size: 11px;
+    font-weight: bold;
+    text-decoration: underline;
+}
+A.nivhaut {
+    color: #FFFFFF;
+    font-family: Arial;
+    font-size: 11px;
+    font-weight: bold;
+    text-decoration: none;
+}
+A.nivhaut:hover {
+    color: #FFFFFF;
+    font-family: Arial;
+    font-size: 11px;
+    font-weight: bold;
+    text-decoration: underline;
+}
+.map {
+    color: #095BA6;
+    font-family: Verdana,Arial;
+    font-size: 10px;
+}
+A.map {
+    color: #095BA6;
+    font-family: Verdana,Arial;
+    font-size: 10px;
+    text-decoration: none;
+}
+A.map:hover {
+    color: #000000;
+    font-family: Verdana,Arial;
+    font-size: 10px;
+    text-decoration: none;
+}
+.txt1 {
+    color: #000000;
+    font-family: Verdana regular,Arial;
+    font-size: 12px;
+}
+A.txt1 {
+    color: #000000;
+    font-family: Verdana regular,Arial;
+    font-size: 12px;
+    text-decoration: none;
+}
+A.txt1:hover {
+    color: #095BA6;
+    font-family: Verdana regular,Arial;
+    font-size: 12px;
+    text-decoration: none;
+}
+.bleu {
+    color: #002384;
+    font-family: Verdana,Arial;
+    font-size: 10px;
+}
+.titre {
+    color: #9E8D00;
+    font-family: verdana;
+    font-size: 16px;
+    font-weight: bolder;
+}
+.titre1 {
+    color: #005681;
+    font-family: verdana;
+    font-size: 16px;
+    font-weight: bolder;
+}
+.stitre {
+    color: #000000;
+    font-family: Verdana;
+    font-size: 12px;
+    font-weight: bold;
+}
+.stitre1 {
+    color: #FFFFFF;
+    font-family: Verdana;
+    font-size: 12px;
+    font-weight: bold;
+}
+A.stitre1 {
+    color: #FFFFFF;
+    font-family: Verdana;
+    font-size: 12px;
+    font-weight: bold;
+    text-decoration: none;
+}
+A.stitre1:hover {
+    color: #FFFFFF;
+    font-family: Verdana;
+    font-size: 12px;
+    font-weight: bold;
+    text-decoration: underline;
+}
+A.navbas {
+    color: #005681;
+    font-family: Arial;
+    font-size: 9px;
+    text-decoration: none;
+}
+A.navbas:hover {
+    color: #9E8D00;
+    font-family: Arial;
+    font-size: 9px;
+    text-decoration: none;
+}
+.navbas {
+    color: #9E8D00;
+    font-family: Arial;
+    font-size: 9px;
+    text-decoration: none;
+}
+.vert {
+    color: green;
+    font-family: Verdana,Arial;
+    font-size: 10px;
+    font-weight: bold;
+}
+A.vert {
+    color: green;
+    font-family: Verdana,Arial;
+    font-size: 10px;
+    font-weight: bold;
+    text-decoration: none;
+}
+A.vert:hover {
+    color: green;
+    font-family: Verdana,Arial;
+    font-size: 10px;
+    font-weight: bold;
+    text-decoration: none;
+}
+A.fonct {
+    color: #005681;
+    font-family: Verdana;
+    font-size: 10px;
+    font-weight: bold;
+    text-decoration: none;
+}
+A.fonct:hover {
+    color: #9E8D00;
+    font-family: Verdana;
+    font-size: 10px;
+    font-weight: bold;
+    text-decoration: none;
+}
+.bouton {
+    background-color: #968513;
+    border-color: #968513;
+    border-width: 1px;
+    color: #FFFFFF;
+    font-family: verdana;
+    font-size: 12px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+#SignupForm {
+    font-size: 1em;
+
+}
+
+#SignupForm fieldset {
+    background-color: #F2F9FE;
+    border: 1px solid #AEDCF5;
+    margin: 10px 0 20px;
+    padding: 20px 15px 10px;
+    position: relative;
+    width: 695px;
+}
+
+#SignupForm fieldset:hover {
+    /*background-color: #FFFCCD;*/
+    border: 1px solid #FFDB60;
+}
+
+#SignupForm fieldset:hover input, #SignupForm fieldset:hover textarea {
+    background-color: #FFFFFF;
+    /* border: 1px solid #FFDB60;*/
+}
+
+#SignupForm fieldset:hover select {
+    background-color: #FFFFFF;
+    /* border: 1px solid #FFDB60;*/
+}
+#SignupForm legend {
+    /* color: #FF5A00;*/
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-size: 16px;
+    font-style: italic;
+    left: 10px;
+    position: absolute;
+    top: -8px;
+}
+
+#SignupForm fieldset:hover legend, .designField:hover legend {
+    color: #000000;
+}
+
+#SignupForm tr {
+    width: 50px;
+    font-size: 12px;
+    margin: 0 0 0 0;
+}
+
+#SignupForm th {
+    float:right;
+    margin:  0 20px  0px 10px;
+    width: 200px;
+    font-family: Verdana regular;
+}
+
+#SignupForm label {
+    /*display: inline;
+    float: left;
+    margin: 0 10px 0px 0;
+    padding: 0;
+    text-align: right;
+    width: 150px;*/
+    color:  #FF5A00;
+    font-size: 11px;
+    font-weight: bold;
+    margin-left: 5px;
+    margin-bottom: 5px;
+}
+
+
+#SignupForm input {
+    border: 1px solid #AEDCF5;
+    color: #3F87E9;
+    font-size: 12px;
+    line-height: 24px;
+    height: 33px;
+    margin: 0 0 5px;
+    padding: 7px 3px 3px 3px;
+    width: 225px;
+    border-radius:5px
+}
+#SignupForm input[type=radio] {
+    /*background-color:transparent;
+    border:none;*/
+    width:10px;
+    margin-top: -5px;
+    margin-right: 2px;
+    float:left;
+}
+
+
+#SignupForm span {
+    margin-bottom: 50px;
+    display:inline;
+    width: 170px;
+    font-family: Verdana regular;
+    font-size: 12px;
+}
+#SignupForm input:hover {
+    border: 1px solid #41A9D8;
+}
+#SignupForm textarea {
+    border: 1px solid #AEDCF5;
+    color: #3F87E9;
+    font-size: 1em;
+    /*width: 300px;*/
+    margin-top:5px;
+    margin-left: 1px;
+}
+#SignupForm select {
+    border: 1px solid #AEDCF5;
+    color: #000000;
+    font-size: 12px;
+    height: 29px;
+    margin: 0 0 5px;
+    padding: 4px 3px 2px;
+    /*width: 200px;*/
+    border-radius:5px
+}
+#SignupForm select option {
+    padding-left: 10px;
+}
+#SignupForm select:hover {
+    border: 1px solid #41A9D8;
+}
+
+#SignupForm p {
+    text-align: left;
+    font-size: 12px;
+}
+#SignupForm #submit {
+    border: 1px solid #000;
+    height: 35px;
+    padding: 5px;
+    width: 92px;
+    font-weight: bold;
+    color: #000;
+    background: #c0c0c0;
+    line-height: 35px;
+    font-variant: small-caps;
+    margin: 0;
+    border-radius:5px
+}
+#SignupForm #submit:hover {
+    border: 0 none;
+    cursor: pointer;
+}
+#rajout{
+    border: 1px solid #000;
+}
+#ajustementRajout{
+    border: 1px solid #000;
+}
+
+.enroule{
+    background:./images/fleche.jpg;
+}
+
+table .actions {
+    margin:0 auto;
+    padding:0;
+}
+table .actions li {
+    display:inline-block;
+    background:none;
+    list-style:none;
+    padding:0;
+}
+.ie7 table .actions li { float:left; }
+table .actions li a {
+    display:block;
+    height:16px;
+    width:16px;
+    text-indent:-9999em;
+    background-position:center;
+    background-repeat:no-repeat;
+}
+table .actions li:last-child { margin-right:0; }
+table .actions .view { background-image:url('../images/search.png'); }
+table .actions .edit { background-image:url('../images/edit.png'); }
+table .actions .delete { background-image:url('../images/page_white_delete.png'); }
+
+#myformannonce {
+    font-size: 1em;
+
+}
+
+#myformannonce fieldset {
+    background-color: #F2F9FE;
+    border: 1px solid #AEDCF5;
+    margin: 10px 0 20px;
+    padding: 20px 15px 10px;
+    position: relative;
+    width: 600px;
+}
+
+#myformannonce fieldset:hover {
+    /*background-color: #FFFCCD;*/
+    /*border: 1px solid #FFDB60;*/
+}
+
+#myformannonce fieldset:hover input, #myformannonce fieldset:hover textarea {
+    background-color: #FFFFFF;
+    /*border: 1px solid #FFDB60;*/
+}
+
+#myformannonce fieldset:hover select {
+    background-color: #FFFFFF;
+    border: 1px solid #FFDB60;
+}
+#myformannonce legend {
+    color: #FF5A00;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-size: 16px;
+    font-style: italic;
+    left: 10px;
+    position: absolute;
+    top: -8px;
+}
+
+#myformannonce fieldset:hover legend, .designField:hover legend {
+    color: #3F87E9;
+}
+
+#myformannonce tr {
+    width: 50px;
+    font-size: 12px;
+    margin: 0 0 0 0;
+}
+
+#myformannonce th {
+    float:right;
+    margin:  0 20px  0px 10px;
+    font-family: Verdana regular;
+}
+
+#myformannonce label {
+    /*display: inline;
+    float: left;
+    margin: 0 10px 0px 0;
+    padding: 0;
+    text-align: right;
+    width: 150px;*/
+    color: #000000;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+
+#myformannonce input {
+    border: 1px solid #AEDCF5;
+    color: #3F87E9;
+    font-size: 12px;
+    line-height: 24px;
+    height: 33px;
+    margin: 0 0 5px;
+    padding: 7px 3px 3px 3px;
+    width: 150px;
+    border-radius:5px
+}
+#myformannonce input[type=radio] {
+    /*background-color:transparent;
+    border:none;*/
+    width:10px;
+    margin-top: -5px;
+    margin-right: 2px;
+    float:left;
+}
+
+
+#myformannonce span {
+    margin-bottom: 50px;
+    display:inline;
+    width: 170px;
+    font-family: Verdana regular;
+    font-size: 12px;
+}
+#myformannonce input:hover {
+    border: 1px solid #41A9D8;
+}
+#myformannonce textarea {
+    border: 1px solid #AEDCF5;
+    color: #3F87E9;
+    font-size: 1em;
+    width: 300px;
+    margin: 10px 0 20px 0;
+}
+#myformannonce select {
+    border: 1px solid #AEDCF5;
+    color: #3F87E9;
+    font-size: 12px;
+    height: 29px;
+    margin: 0 0 5px;
+    padding: 4px 3px 2px;
+    width: 120px;
+    border-radius:5px
+}
+#myformannonce select option {
+    padding-left: 10px;
+}
+#myformannonce select:hover {
+    border: 1px solid #41A9D8;
+}
+
+#myformannonce p {
+    text-align: center;
+    font-size: 12px;
+}
+#myformannonce #submit {
+    border: 1px solid #000;
+    height: 35px;
+    padding: 5px;
+    width: 92px;
+    font-weight: bold;
+    color: #000;
+    background: #c0c0c0;
+    line-height: 35px;
+    font-variant: small-caps;
+    border-radius:5px;
+
+}
+#myformannonce #submit:hover {
+    border: 0 none;
+    cursor: pointer;
+}
+
+
+.soumenu{margin:0;padding:0;display:none;}
+.soumenu{list-style:none;text-decoration:none;}
+.paragraphemenu{margin:0;padding:0;}

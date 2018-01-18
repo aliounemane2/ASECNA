@@ -1,0 +1,9 @@
+public function mapper_departement()
+  { 
+	$Map=array(
+	'departement'=>'departement',
+	'id'=>'id',
+	'libelle'=>'libelle');
+	
+	return $Map;
+  } 

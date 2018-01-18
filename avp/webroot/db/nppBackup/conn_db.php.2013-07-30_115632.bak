@@ -1,0 +1,9 @@
+<?php
+session_start();
+$host="localhost";
+$user="root";
+$password="";
+$mabase="asecna";
+mysql_connect($host,$user,$password)  or die(mysql_error());
+mysql_select_db($mabase)  or die(mysql_error());
+?>

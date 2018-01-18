@@ -1,0 +1,77 @@
+<script  type="text/javascript">
+
+    function reponse(f) {
+        var texte="";
+        w =open("","Fiche",options);
+        nom=f.Nom.value;
+        prenom=f.Prenom.value;
+        mail=f.Email.value;
+        discipline=f.disciplines.options[f.disciplines.selectedIndex].text;
+        for (i=0;i<f.specialites.length;i++) {
+            if (f.specialites[i].checked)
+                specialite=f.specialites[i].value;
+        }
+        texte += "<h3>Fiche de renseignements</h3>";
+        texte += "Votre nom : "+ nom+"<br>Votre prénom : "+ prenom+""<br>";
+        texte += "Votre e-mail : "+mail+"<P>";
+        texte += "Votre spécialité de TS : "+ specialite+""<br>";
+        texte += "Votre discipline favorite : "+discipline+""<P>";
+        texte += "Vous êtes inscrit(e) en : <UL>";
+        if  (f.deug.checked) texte += "<LI>"+f.deug.value+"<br>";
+        if  (f.cpge.checked) texte += "<LI>"+f.cpge.value+"<br>";
+        if  (f.iut.checked)  texte += "<LI>"+f.iut.value+"<br>";
+        if  (f.bts.checked)  texte += "<LI>"+f.bts.value+"<br>";
+        if  (f.autre.checked) texte +="<LI>"+f.autre.value+"<br>";
+        texte += "</ul>";
+        texte += "<h4>Votre projet informatique :</h4>"+f.projet.value;
+// pour afficher dans une fenêtre
+// var hauteur=300, largeur=300;
+// options="width="+largeur+",height="+hauteur+"toolbar=1,directories=0";
+// w.document.write(texte);
+        document.getElementById("reponse").innerHTML=texte;
+    }
+    function fermer(){  w.close(); }
+</script>
+</head>
+<body>
+<h2><u>Fiche de renseignements</u></h2>
+
+<form  name="fiche">
+    Nom : <input type ="text" name="Nom" VALUE="" >
+    Prénom : <input type ="text" name="Prenom" VALUE="" >
+    Email : <input type="text" name="Email" SIZE=5>
+    <p></p>
+    Vous êtes en terminale S à dominante :
+    <input type="radio" name="specialites" VALUE="Math" checked>Mathématiques
+    <input type="radio" name="specialites" VALUE="PC">Physique-chimie
+    <input type="radio" name="specialites" VALUE="SVT">SVT
+    Quelle est votre discipline préférée ?
+    <select name="disciplines"  size="3">
+        <option>Physique
+        <option SELECTED>Informatique
+        <option>Philosophie
+        <option>Mathématiques
+        <option>Langues
+        <option>SVT
+        <option>Histoire
+        <option>EPS
+    </select>
+    Vous vous êtes inscrit(e)s en :<BR>
+    <input type=checkbox CHECKED name="deug" value="Deug">Deug
+    <input type=checkbox name="cpge" value="Classe préparatoire">Prépa
+    <input type=checkbox name="bts"  value="BTS">BTS
+    <input type=checkbox name="iut"  value="IUT">IUT
+    <input type=checkbox name="autre"  value="Autre école">Autre école
+    Ecrivez ci-dessous le sujet de votre projet informatique :<BR>
+    <TEXTAREA name="projet" ROWS=5 COLS=55>
+        Voici mon projet d'option informatique
+    </TEXTAREA>
+    <TABLE width="90%" BORDER="2">
+        <TR ALIGN=center>
+            <TD>Valider ces informations<input type="button" VALUE="Enregistrer"
+                                               onclick="reponse(fiche)"> </TD>
+            <TD>Recommencer la saisie<P><input type="reset" value="Effacer"></TD>
+            <TD>Fermer le formulaire<input type="button" value="Fermer" onclick="fermer()">
+            </TD></TR></TABLE>
+</form>
+<div id="reponse"><h4>Fiche de renseignements</h4><div>
